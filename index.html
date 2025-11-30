@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¿Quieres ser mi novia?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #ffe6f0;
+    }
+    h1 {
+      color: #d6336c;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      margin: 20px;
+      cursor: pointer;
+      border-radius: 10px;
+      border: none;
+    }
+    #yes {
+      background-color: #ff4d6d;
+      color: white;
+    }
+    #no {
+      background-color: #999;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <h1>¿Quieres ser mi novia?</h1>
+  <button id="yes">Sí 💖</button>
+  <button id="no">No 😢</button>
+
+  <script>
+    const noBtn = document.getElementById("no");
+    const yesBtn = document.getElementById("yes");
+
+    // Mueve el botón "No" cuando el mouse se acerca
+    noBtn.addEventListener("mouseover", () => {
+      noBtn.style.left = Math.random() * (window.innerWidth - 100) + "px";
+      noBtn.style.top = Math.random() * (window.innerHeight - 50) + "px";
+    });
+
+    // Acción cuando se da clic en "Sí"
+    yesBtn.addEventListener("click", () => {
+      alert("¡Sabía que dirías que sí! 💕");
+    });
+  </script>
+</body>
+</html>
